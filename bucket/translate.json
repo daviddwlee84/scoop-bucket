@@ -1,0 +1,22 @@
+{
+    "version": "0.6.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/daviddwlee84/translate/releases/download/v0.6.0/translate_0.6.0_windows_amd64.zip",
+            "bin": [
+                "translate.exe"
+            ],
+            "hash": "c0952d71e15999f8a99285191a554dbf1ae639eb60ad0450e823e8b03f8c3a78"
+        },
+        "arm64": {
+            "url": "https://github.com/daviddwlee84/translate/releases/download/v0.6.0/translate_0.6.0_windows_arm64.zip",
+            "bin": [
+                "translate.exe"
+            ],
+            "hash": "6d17c8a19e6d19c2aa3173210e16dc725a38b0890a99dc87c3e398e6ada316a2"
+        }
+    },
+    "homepage": "https://github.com/daviddwlee84/translate",
+    "license": "MIT",
+    "description": "Fast terminal translation tool (CLI + TUI)"
+}

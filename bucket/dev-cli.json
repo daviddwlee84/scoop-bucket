@@ -1,17 +1,17 @@
 {
-  "version": "0.2.17",
+  "version": "0.2.41",
   "description": "A thin glue layer over git, worktrees, forges and agent runtimes.",
   "homepage": "https://github.com/daviddwlee84/dev-cli",
   "license": "MIT",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/daviddwlee84/dev-cli/releases/download/v0.2.17/dev-cli_v0.2.17_windows_amd64.zip",
-      "hash": "b2a3773adfb7e0ff1bd388332edf435613c3c9681e7ca102b7f729163944af86",
+      "url": "https://github.com/daviddwlee84/dev-cli/releases/download/v0.2.41/dev-cli_v0.2.41_windows_amd64.zip",
+      "hash": "c9bb31eeb3fdd06010d17786b32af96fee04ac7edad827727dff942b0d0276fd",
       "bin": "dev.exe"
     },
     "arm64": {
-      "url": "https://github.com/daviddwlee84/dev-cli/releases/download/v0.2.17/dev-cli_v0.2.17_windows_arm64.zip",
-      "hash": "d0f2b504a989cfad88c4fe410682677c9ed163e632d0559b6394a43ea1fad458",
+      "url": "https://github.com/daviddwlee84/dev-cli/releases/download/v0.2.41/dev-cli_v0.2.41_windows_arm64.zip",
+      "hash": "0cfe204cd79a44f68cd3bcbb93cb7b7ff57dea22537fdf3f977cf7b264b59698",
       "bin": "dev.exe"
     }
   },

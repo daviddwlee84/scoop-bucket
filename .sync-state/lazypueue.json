@@ -1,0 +1,23 @@
+{
+  "assets": {
+    "windows_amd64": {
+      "asset_id": 583950103,
+      "name": "lazypueue_0.2.0_windows_amd64.zip",
+      "sha256": "728c9944e02965245f352ee9b43b2107dbc4d6504f106090a4aa91f7e6c863a3",
+      "size": 5382297,
+      "url": "https://github.com/daviddwlee84/lazypueue/releases/download/v0.2.0/lazypueue_0.2.0_windows_amd64.zip"
+    },
+    "windows_arm64": {
+      "asset_id": 583950155,
+      "name": "lazypueue_0.2.0_windows_arm64.zip",
+      "sha256": "e9864463d647be8518a5adb73164192d3cd4c7ed538344ba577918e640da0eba",
+      "size": 4822917,
+      "url": "https://github.com/daviddwlee84/lazypueue/releases/download/v0.2.0/lazypueue_0.2.0_windows_arm64.zip"
+    }
+  },
+  "checksum_asset_id": 583949875,
+  "checksum_sha256": "be9660ca13bf784e55eec5ad0fe403962a8b612ce58c9a448b4e8fa25544b8b2",
+  "release_id": 394751591,
+  "tag": "v0.2.0",
+  "version": "0.2.0"
+}

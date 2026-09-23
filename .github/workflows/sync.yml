@@ -1,0 +1,79 @@
+name: Sync verified Windows releases
+on:
+  schedule:
+    - cron: '43 * * * *'
+  workflow_dispatch:
+    inputs:
+      tool:
+        description: Comma-separated new-suite tools (empty selects all five)
+        required: false
+        type: string
+  push:
+    paths: ['scripts/**', 'tests/**', 'tools.json', '.github/workflows/sync.yml']
+  pull_request:
+permissions:
+  contents: read
+concurrency:
+  group: personal-scoop-sync-${{ github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
+  cancel-in-progress: false
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests
+  sync:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    needs: test
+    runs-on: windows-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify and synchronize selected releases
+        id: sync
+        continue-on-error: true
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SELECTED_TOOLS: ${{ inputs.tool }}
+        run: |
+          $arguments = @('scripts/sync.py', '--write', '--scoop-smoke')
+          if ($env:SELECTED_TOOLS) { $arguments += @('--tool', $env:SELECTED_TOOLS) }
+          python @arguments
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Commit only successfully verified manifests
+        shell: pwsh
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          foreach ($name in @('exp-cli', 'lazyclash', 'lazypueue', 'lazychezmoi', 'lazymlflow')) {
+            foreach ($path in @("bucket/$name.json", ".sync-state/$name.json")) {
+              if (Test-Path -LiteralPath $path -PathType Leaf) {
+                git add -- $path
+                if ($LASTEXITCODE -ne 0) { throw 'Could not stage a generated manifest' }
+              }
+            }
+          }
+          git diff --cached --quiet
+          if ($LASTEXITCODE -eq 1) {
+            git commit -m 'Sync verified Windows release manifests'
+            if ($LASTEXITCODE -ne 0) { throw 'Manifest commit failed' }
+            git pull --rebase origin main
+            if ($LASTEXITCODE -ne 0) { throw 'Concurrent changes need review; no force push' }
+            git push origin HEAD:main
+            if ($LASTEXITCODE -ne 0) { throw 'Manifest push failed' }
+          } elseif ($LASTEXITCODE -ne 0) { throw 'Could not inspect staged manifests' }
+      - name: Report any failed tool
+        if: steps.sync.outcome == 'failure'
+        shell: pwsh
+        run: throw 'One or more tools failed validation; only successful manifests were committed.'

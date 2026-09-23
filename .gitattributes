@@ -1,0 +1,3 @@
+# The publisher compares exact generated manifest bytes on native Windows.
+# Keep checkouts byte-identical to the LF JSON written by the publisher.
+*.json text eol=lf

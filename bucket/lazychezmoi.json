@@ -1,0 +1,34 @@
+{
+  "version": "0.2.0",
+  "description": "Interactive chezmoi dotfiles workflow",
+  "homepage": "https://github.com/daviddwlee84/lazychezmoi",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/daviddwlee84/lazychezmoi/releases/download/v0.2.0/lazychezmoi_0.2.0_windows_amd64.zip",
+      "hash": "2e6d7cae47355c5dfeaf375d44b840117afc5608954ab02da5e81f949aa73a67",
+      "bin": "lazychezmoi.exe"
+    },
+    "arm64": {
+      "url": "https://github.com/daviddwlee84/lazychezmoi/releases/download/v0.2.0/lazychezmoi_0.2.0_windows_arm64.zip",
+      "hash": "5ca3d5c141c026412b38541053ee58305f2127289339a7f7b2d296c3c8038e86",
+      "bin": "lazychezmoi.exe"
+    }
+  },
+  "checkver": {
+    "github": "https://github.com/daviddwlee84/lazychezmoi"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/daviddwlee84/lazychezmoi/releases/download/v$version/lazychezmoi_$version_windows_amd64.zip"
+      },
+      "arm64": {
+        "url": "https://github.com/daviddwlee84/lazychezmoi/releases/download/v$version/lazychezmoi_$version_windows_arm64.zip"
+      }
+    },
+    "hash": {
+      "url": "https://github.com/daviddwlee84/lazychezmoi/releases/download/v$version/checksums.txt"
+    }
+  }
+}

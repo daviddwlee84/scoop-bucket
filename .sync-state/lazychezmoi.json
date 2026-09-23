@@ -1,0 +1,23 @@
+{
+  "assets": {
+    "windows_amd64": {
+      "asset_id": 583956731,
+      "name": "lazychezmoi_0.2.0_windows_amd64.zip",
+      "sha256": "2e6d7cae47355c5dfeaf375d44b840117afc5608954ab02da5e81f949aa73a67",
+      "size": 3844979,
+      "url": "https://github.com/daviddwlee84/lazychezmoi/releases/download/v0.2.0/lazychezmoi_0.2.0_windows_amd64.zip"
+    },
+    "windows_arm64": {
+      "asset_id": 583956768,
+      "name": "lazychezmoi_0.2.0_windows_arm64.zip",
+      "sha256": "5ca3d5c141c026412b38541053ee58305f2127289339a7f7b2d296c3c8038e86",
+      "size": 3515505,
+      "url": "https://github.com/daviddwlee84/lazychezmoi/releases/download/v0.2.0/lazychezmoi_0.2.0_windows_arm64.zip"
+    }
+  },
+  "checksum_asset_id": 583956535,
+  "checksum_sha256": "ee2fcebfa66e7a90f46e937c7385ab8fc61becae95b0457cf4ed02f65223ece0",
+  "release_id": 394754972,
+  "tag": "v0.2.0",
+  "version": "0.2.0"
+}

@@ -1,0 +1,23 @@
+{
+  "assets": {
+    "windows_amd64": {
+      "asset_id": 583959946,
+      "name": "lazymlflow_0.3.0_windows_amd64.zip",
+      "sha256": "7b0abd5e9f8e1da071236f753e0502984c878f8d2bcb8f6b4285d55615d0d71c",
+      "size": 7933244,
+      "url": "https://github.com/daviddwlee84/lazymlflow/releases/download/v0.3.0/lazymlflow_0.3.0_windows_amd64.zip"
+    },
+    "windows_arm64": {
+      "asset_id": 583959993,
+      "name": "lazymlflow_0.3.0_windows_arm64.zip",
+      "sha256": "28bed5d3b5af598d1e4cad9e792f51eb6a2f82971f7e4c54feb894b464228b55",
+      "size": 7240862,
+      "url": "https://github.com/daviddwlee84/lazymlflow/releases/download/v0.3.0/lazymlflow_0.3.0_windows_arm64.zip"
+    }
+  },
+  "checksum_asset_id": 583959744,
+  "checksum_sha256": "7a83396d10bb1baee40e4ec9407369b5ab3d23c71a354ff6829453cbba03336b",
+  "release_id": 394756709,
+  "tag": "v0.3.0",
+  "version": "0.3.0"
+}

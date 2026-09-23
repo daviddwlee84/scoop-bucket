@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Verify immutable Windows releases before publishing the five personal Scoop manifests."""
+"""Verify immutable Windows releases before publishing the four personal Scoop manifests."""
 from __future__ import annotations
 import argparse, hashlib, json, os, re, struct, subprocess, sys, tempfile, time
 import urllib.error, urllib.request, zipfile
@@ -244,7 +244,7 @@ def synchronize(tool, write=False, native=None):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--tool", help="comma-separated registry tool IDs; default all five")
+    parser.add_argument("--tool", help="comma-separated registry tool IDs; default all four")
     parser.add_argument("--write", action="store_true")
     parser.add_argument("--scoop-smoke", action="store_true")
     args = parser.parse_args()

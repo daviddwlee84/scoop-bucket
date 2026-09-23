@@ -1,14 +1,5 @@
 [
   {
-    "id": "exp-cli",
-    "repo": "daviddwlee84/exp-cli",
-    "binary": "exp",
-    "description": "Git-native research workflow",
-    "license": "MIT",
-    "archive": "exp-cli_{version}_{os}_{arch}.zip",
-    "checksums": "checksums.txt"
-  },
-  {
     "id": "lazyclash",
     "repo": "daviddwlee84/lazyclash",
     "binary": "lazyclash",

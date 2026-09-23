@@ -5,14 +5,13 @@ Verified Windows packages for personal CLI tools:
 ```powershell
 scoop bucket add daviddwlee84 https://github.com/daviddwlee84/scoop-bucket
 scoop install daviddwlee84/translate
-scoop install daviddwlee84/exp-cli
 scoop install daviddwlee84/lazyclash
 scoop install daviddwlee84/lazypueue
 scoop install daviddwlee84/lazychezmoi
 scoop install daviddwlee84/lazymlflow
 ```
 
-`exp-cli` provides `exp.exe`. The existing `dev-cli` package provides `dev.exe`;
+The existing `dev-cli` package provides `dev.exe`;
 Windows dotfiles deliberately retain their separate verified `dev-cli.exe`
 installation to avoid Microsoft's unrelated `dev` command.
 
@@ -20,14 +19,14 @@ installation to avoid Microsoft's unrelated `dev` command.
 
 Manifests are generated. `dev-cli` and `translate` retain their existing source
 repository publishers. This repository's `tools.json` and `scripts/sync.py` own
-only exp-cli and the four lazy manifests; source repositories publish immutable
+only the four lazy manifests; source repositories publish immutable
 releases and do not need a token to write this bucket.
 
 The central workflow runs hourly and accepts a comma-separated selection:
 
 ```sh
 gh workflow run sync.yml --repo daviddwlee84/scoop-bucket \
-  -f tool=exp-cli,lazyclash,lazypueue,lazychezmoi,lazymlflow
+  -f tool=lazyclash,lazypueue,lazychezmoi,lazymlflow
 ```
 
 It verifies both amd64/arm64 ZIP assets, their exact SHA256 manifest, safe ZIP
@@ -44,7 +43,7 @@ install or commit. Receipts live in `.sync-state/`.
 
 ## Upgrade behavior
 
-Use `scoop update <package>` for external updates. The five centrally managed
+Use `scoop update <package>` for external updates. The four centrally managed
 CLIs also expose `upgrade --check` and tracked Scoop handoff: the original
 process exits before an independent helper updates the package. Initial
 `handed-off` output is acceptance, not success. Use the returned `status_command`
@@ -58,9 +57,12 @@ No package installs backend services, Go toolchains or agent skills implicitly.
 
 ```sh
 python -m unittest discover -s tests
-python scripts/sync.py --tool exp-cli   # read-only release verification
+python scripts/sync.py --tool lazyclash   # read-only release verification
 ```
 
 Writing manifests requires `--write --scoop-smoke` on a disposable GitHub-hosted
 Windows runner. Never edit a generated manifest or replace a published release
 asset to repair an unsuccessful verification.
+
+Windows publication and installation of exp-cli are deferred pending its
+canonical storage and native runtime contract; it is not in this sync registry.

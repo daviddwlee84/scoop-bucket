@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
     inputs:
       tool:
-        description: Comma-separated new-suite tools (empty selects all five)
+        description: Comma-separated new-suite tools (empty selects all four)
         required: false
         type: string
   push:
@@ -56,7 +56,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          foreach ($name in @('exp-cli', 'lazyclash', 'lazypueue', 'lazychezmoi', 'lazymlflow')) {
+          foreach ($name in @('lazyclash', 'lazypueue', 'lazychezmoi', 'lazymlflow')) {
             foreach ($path in @("bucket/$name.json", ".sync-state/$name.json")) {
               if (Test-Path -LiteralPath $path -PathType Leaf) {
                 git add -- $path

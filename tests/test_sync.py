@@ -29,7 +29,7 @@ class SyncTests(unittest.TestCase):
         return out.getvalue()
 
     def fixture(self):
-        tool = json.loads((sync.ROOT / 'tools.json').read_text())[0]
+        tool = {'id':'exp-cli','repo':'fixture/exp-cli','binary':'exp','description':'alias fixture','license':'MIT','archive':'exp-cli_{version}_{os}_{arch}.zip','checksums':'checksums.txt'}
         assets, payloads, lines = [], {}, []
         for i, arch in enumerate(['amd64', 'arm64']):
             name = f'exp-cli_0.2.0_windows_{arch}.zip'
@@ -47,9 +47,9 @@ class SyncTests(unittest.TestCase):
         payloads[f'https://api.github.com/repos/{tool["repo"]}/releases/latest'] = json.dumps(release).encode()
         return tool, release, sums, payloads
 
-    def test_only_five_new_publishers_are_owned(self):
+    def test_only_four_new_publishers_are_owned(self):
         tools = json.loads((sync.ROOT / 'tools.json').read_text())
-        self.assertEqual({t['id'] for t in tools}, {'exp-cli', 'lazyclash', 'lazypueue', 'lazychezmoi', 'lazymlflow'})
+        self.assertEqual({t['id'] for t in tools}, {'lazyclash', 'lazypueue', 'lazychezmoi', 'lazymlflow'})
 
     def test_both_architectures_and_binary_alias(self):
         tool, release, sums, _ = self.fixture()

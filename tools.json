@@ -1,0 +1,38 @@
+[
+  {
+    "id": "lazyclash",
+    "repo": "daviddwlee84/lazyclash",
+    "binary": "lazyclash",
+    "description": "Mihomo terminal dashboard and configuration tools",
+    "license": "MIT",
+    "archive": "lazyclash_{version}_{os}_{arch}.zip",
+    "checksums": "checksums.txt"
+  },
+  {
+    "id": "lazypueue",
+    "repo": "daviddwlee84/lazypueue",
+    "binary": "lazypueue",
+    "description": "Pueue task and queue dashboard",
+    "license": "MIT",
+    "archive": "lazypueue_{version}_{os}_{arch}.zip",
+    "checksums": "checksums.txt"
+  },
+  {
+    "id": "lazychezmoi",
+    "repo": "daviddwlee84/lazychezmoi",
+    "binary": "lazychezmoi",
+    "description": "Interactive chezmoi dotfiles workflow",
+    "license": "MIT",
+    "archive": "lazychezmoi_{version}_{os}_{arch}.zip",
+    "checksums": "checksums.txt"
+  },
+  {
+    "id": "lazymlflow",
+    "repo": "daviddwlee84/lazymlflow",
+    "binary": "lazymlflow",
+    "description": "MLflow experiment and artifact explorer",
+    "license": "MIT",
+    "archive": "lazymlflow_{version}_{os}_{arch}.zip",
+    "checksums": "checksums.txt"
+  }
+]

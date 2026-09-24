@@ -1,17 +1,17 @@
 {
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "MLflow experiment and artifact explorer",
   "homepage": "https://github.com/daviddwlee84/lazymlflow",
   "license": "MIT",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/daviddwlee84/lazymlflow/releases/download/v0.3.0/lazymlflow_0.3.0_windows_amd64.zip",
-      "hash": "7b0abd5e9f8e1da071236f753e0502984c878f8d2bcb8f6b4285d55615d0d71c",
+      "url": "https://github.com/daviddwlee84/lazymlflow/releases/download/v0.3.1/lazymlflow_0.3.1_windows_amd64.zip",
+      "hash": "663308fc182a0641f88584c7bd483d4765622d1ce84a03d2d061a726a9dc1135",
       "bin": "lazymlflow.exe"
     },
     "arm64": {
-      "url": "https://github.com/daviddwlee84/lazymlflow/releases/download/v0.3.0/lazymlflow_0.3.0_windows_arm64.zip",
-      "hash": "28bed5d3b5af598d1e4cad9e792f51eb6a2f82971f7e4c54feb894b464228b55",
+      "url": "https://github.com/daviddwlee84/lazymlflow/releases/download/v0.3.1/lazymlflow_0.3.1_windows_arm64.zip",
+      "hash": "93dc910d4449f56cd778cec45769626ddbaeb7f430bc7f27732e7b42d0737692",
       "bin": "lazymlflow.exe"
     }
   },

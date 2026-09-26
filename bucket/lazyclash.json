@@ -1,17 +1,17 @@
 {
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Mihomo terminal dashboard and configuration tools",
   "homepage": "https://github.com/daviddwlee84/lazyclash",
   "license": "MIT",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/daviddwlee84/lazyclash/releases/download/v0.2.0/lazyclash_0.2.0_windows_amd64.zip",
-      "hash": "1c13a80179d3b75095e0090020cfe23b23b3992219ee7ee4ed7735d66252890f",
+      "url": "https://github.com/daviddwlee84/lazyclash/releases/download/v0.2.1/lazyclash_0.2.1_windows_amd64.zip",
+      "hash": "0237ca6a0cea5d35ac87b964c1e779dd324875fde7f8beef08ffe08fe597e664",
       "bin": "lazyclash.exe"
     },
     "arm64": {
-      "url": "https://github.com/daviddwlee84/lazyclash/releases/download/v0.2.0/lazyclash_0.2.0_windows_arm64.zip",
-      "hash": "5c8f50c733dc8c01a067c290eb39d241a6bee0ca7b8b5010efce2170b2c5a4cd",
+      "url": "https://github.com/daviddwlee84/lazyclash/releases/download/v0.2.1/lazyclash_0.2.1_windows_arm64.zip",
+      "hash": "12f868ac811acb593a3aaaa7ce0c7dbe70fa20cb31f38ed3a71c2a57ac1f7571",
       "bin": "lazyclash.exe"
     }
   },

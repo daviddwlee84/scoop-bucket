@@ -1,23 +1,23 @@
 {
   "assets": {
     "windows_amd64": {
-      "asset_id": 583970421,
-      "name": "lazyclash_0.2.0_windows_amd64.zip",
-      "sha256": "1c13a80179d3b75095e0090020cfe23b23b3992219ee7ee4ed7735d66252890f",
-      "size": 8943883,
-      "url": "https://github.com/daviddwlee84/lazyclash/releases/download/v0.2.0/lazyclash_0.2.0_windows_amd64.zip"
+      "asset_id": 589775240,
+      "name": "lazyclash_0.2.1_windows_amd64.zip",
+      "sha256": "0237ca6a0cea5d35ac87b964c1e779dd324875fde7f8beef08ffe08fe597e664",
+      "size": 9388900,
+      "url": "https://github.com/daviddwlee84/lazyclash/releases/download/v0.2.1/lazyclash_0.2.1_windows_amd64.zip"
     },
     "windows_arm64": {
-      "asset_id": 583970469,
-      "name": "lazyclash_0.2.0_windows_arm64.zip",
-      "sha256": "5c8f50c733dc8c01a067c290eb39d241a6bee0ca7b8b5010efce2170b2c5a4cd",
-      "size": 8263083,
-      "url": "https://github.com/daviddwlee84/lazyclash/releases/download/v0.2.0/lazyclash_0.2.0_windows_arm64.zip"
+      "asset_id": 589775261,
+      "name": "lazyclash_0.2.1_windows_arm64.zip",
+      "sha256": "12f868ac811acb593a3aaaa7ce0c7dbe70fa20cb31f38ed3a71c2a57ac1f7571",
+      "size": 8679613,
+      "url": "https://github.com/daviddwlee84/lazyclash/releases/download/v0.2.1/lazyclash_0.2.1_windows_arm64.zip"
     }
   },
-  "checksum_asset_id": 583970059,
-  "checksum_sha256": "ea296f7f3509b079885d6bad0cb42fa3aa28610ca3b32331d045e84423568eb1",
-  "release_id": 394762129,
-  "tag": "v0.2.0",
-  "version": "0.2.0"
+  "checksum_asset_id": 589775086,
+  "checksum_sha256": "189bcd8d376cb1deebce8f1968f32b3e46c994da4664fe09c1321c1cc7a0a534",
+  "release_id": 397045316,
+  "tag": "v0.2.1",
+  "version": "0.2.1"
 }

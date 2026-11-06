@@ -1,19 +1,19 @@
 {
-    "version": "0.6.2",
+    "version": "0.7.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/daviddwlee84/translate/releases/download/v0.6.2/translate_0.6.2_windows_amd64.zip",
+            "url": "https://github.com/daviddwlee84/translate/releases/download/v0.7.0/translate_0.7.0_windows_amd64.zip",
             "bin": [
                 "translate.exe"
             ],
-            "hash": "c5aa47f4399cad8406ae5d0eeb36b981b99a0d3fcf15bcbca5b0efe7e4875c74"
+            "hash": "ad30486b15c02be4d835fa4cb988e66c6c3e43b7bf77d32f10bb6b5f008b39bd"
         },
         "arm64": {
-            "url": "https://github.com/daviddwlee84/translate/releases/download/v0.6.2/translate_0.6.2_windows_arm64.zip",
+            "url": "https://github.com/daviddwlee84/translate/releases/download/v0.7.0/translate_0.7.0_windows_arm64.zip",
             "bin": [
                 "translate.exe"
             ],
-            "hash": "db4b89a20558fe8d08f27c0f205aec8df7a65a3ca0dd55e96ddc2fee5c72891b"
+            "hash": "9c0fb9dc956d4708d8c38ab3eb069905f66daba86896216b3a3dd5457f71d80d"
         }
     },
     "homepage": "https://github.com/daviddwlee84/translate",
